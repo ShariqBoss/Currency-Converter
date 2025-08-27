@@ -1,7 +1,8 @@
-import express, { Application, Request, Response } from 'express';
+import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import currencyRoutes from './routes/currencyRoutes';
+import type { Application, Request, Response } from 'express';
 
 dotenv.config();
 
@@ -17,8 +18,10 @@ app.get('/health', (req: Request, res: Response) => {
   res.status(200).json({ status: 'OK', message: 'Currency Converter API is running' });
 });
 
-app.listen(PORT, () => {
-  console.log(`Currency Converter API is running on port ${PORT}`);
-});
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`Currency Converter API is running on port ${PORT}`);
+  });
+}
 
 export default app;

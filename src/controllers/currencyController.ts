@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import axios from 'axios';
-import dotenv from 'dotenv';
+import * as dotenv from 'dotenv';
 import { CurrencyListResponse, ConversionResponse, ConversionHistoryItem } from '../types/currencyTypes';
 
 dotenv.config();
