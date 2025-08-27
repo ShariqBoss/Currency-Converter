@@ -24,7 +24,7 @@ export const getCurrencyList = async (req: Request, res: Response) => {
   }
 };
 
-export const convertCurrency = async (req: Request, res: Response) => {
+export const convertCurrency = async (req: Request, res: Response): Promise<any> => {
   try {
     const { from, to, amount } = req.body;
     

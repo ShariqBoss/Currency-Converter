@@ -29,3 +29,4 @@ export interface ConversionHistoryItem {
     rate: number;
     timestamp: string;
 }
+//# sourceMappingURL=currencyTypes.d.ts.map
